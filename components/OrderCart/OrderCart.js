@@ -5,15 +5,15 @@ const OrderCart = ({ toogleOrder, showOrder }) => {
 
   return (
     <div
-      className={`lg:col-span-2 fixed lg:static  top-0 bg-[#1F1D2B] w-full h-full transition-all ${
+      className={`lg:col-span-2 fixed top-0 bg-[#1F1D2B] w-full lg:w-96 lg:right-0  h-full transition-all ${
         showOrder ? "right-0" : "-right-full"
       }`}
     >
       {/* Cart Order */}
-      <div className="relative pt-16 text-gray-300 p-8 h-full">
+      <div className="relative pt-16 lg:pt-8 text-gray-300 p-8 h-full">
         <RiCloseLine
           onClick={toogleOrder}
-          className="absolute left-4 top-4 p-2 box-content text-gray-300 bg-[#262837] rounded-full text-xl"
+          className="lg:hidden absolute left-4 top-4 p-2 box-content text-gray-300 bg-[#262837] rounded-full text-xl"
         />
         <h1 className="text-2xl my-4">Orders #15654</h1>
         {/* tags */}

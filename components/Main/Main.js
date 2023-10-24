@@ -6,8 +6,8 @@ import OrderCart from "../OrderCart/OrderCart";
 
 const Main = ({ toogleOrder, showOrder }) => {
   return (
-    <main className="lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20">
-      <div className="lg:col-span-6 md:p-8">
+    <main className="lg:pl-32 grid grid-cols-1 lg:grid-cols-8 pb-20">
+      <div className="lg:col-span-6 md:p-8 p-4">
         <header>
           {/* Title header */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
