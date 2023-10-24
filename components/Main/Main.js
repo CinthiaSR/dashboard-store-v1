@@ -4,7 +4,7 @@ import { RiArrowDownSLine, RiSearch2Line } from "react-icons/ri";
 import CardSingle from "../CardSingle/CardSingle";
 import OrderCart from "../OrderCart/OrderCart";
 
-const Main = () => {
+const Main = ({ toogleOrder, showOrder }) => {
   return (
     <main className="lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20">
       <div className="lg:col-span-6 md:p-8">
@@ -58,7 +58,7 @@ const Main = () => {
         <CardSingle />
       </div>
       {/* Cart Order */}
-      <OrderCart />
+      <OrderCart showOrder={showOrder} toogleOrder={toogleOrder} />
     </main>
   );
 };

@@ -17,6 +17,12 @@ const HomePage = () => {
 
   const toogleMenu = () => {
     setShowMenu(!showMenu);
+    setShowOrder(false);
+  };
+
+  const toogleOrder = () => {
+    setShowOrder(!showOrder);
+    setShowMenu(false);
   };
 
   return (
@@ -32,7 +38,7 @@ const HomePage = () => {
         <button className="p-2">
           <RiAddLine />
         </button>
-        <button className="p-2">
+        <button onClick={toogleOrder} className="p-2">
           <RiPieChartLine />
         </button>
         <button onClick={toogleMenu} className="text-white p-2">
@@ -40,7 +46,7 @@ const HomePage = () => {
           {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
         </button>
       </nav>
-      <Main />
+      <Main showOrder={showOrder} toogleOrder={toogleOrder} />
     </div>
   );
 };
